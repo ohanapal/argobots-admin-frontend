@@ -76,10 +76,11 @@ export default function UpdateCompanyBotForm() {
     <Form methods={methods} onSubmit={handleSubmit(onSubmit)}>
       <DashboardHeading
         title='Update Assistant'
+        id={id as string}
         extra={
           <>
             <Button variant='destructive' onClick={discardChanges}>
-              Discard
+              Discard 
             </Button>
             <Button variant='gradient' icon={<PencilLine />} type='submit' isLoading={isLoading}>
               Update Agent

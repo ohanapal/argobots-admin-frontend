@@ -7,7 +7,7 @@ import { Input } from '@/components/reusable/form/input'
 import SingleAccordion from '@/components/reusable/form/single-accordion'
 import { Label } from '@/components/ui/label'
 import { slugify } from '@/utils/form/slugify'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useFormContext } from 'react-hook-form'
 
 export default function UpdateAppearance() {
@@ -27,8 +27,14 @@ export default function UpdateAppearance() {
     else setValue('embedding_url', '')
   }, [nameVal, setValue])
 
+
+  const [checked, setChecked] = useState(false)
+  console.log(checked)
   return (
     <SingleAccordion value='appearance' label='Appearance'>
+      {/* add checkbox to expose bot id */}
+      <Input type='checkbox' checked={checked} onChange={() => setChecked(!checked)} />
+      
       <Input name='name' label='Assistant Name' placeholder='Assistant name here...' required />
       <Input name='embedding_url' label='Embedding URL Slug' placeholder='Edit Embedding URL Slug...' required />
 
