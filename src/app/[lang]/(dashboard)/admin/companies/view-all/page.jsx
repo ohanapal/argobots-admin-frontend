@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import LLink from '@/components/ui/llink'
 
 export const metadata = {
-  title: 'All Companies | Inova'
+  title: 'All Companies | Argobots'
 }
 
 export default function ViewAllPage() {

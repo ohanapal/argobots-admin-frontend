@@ -48,7 +48,7 @@ export default function AdminSideNav({ currentLink, links, setnavbarOpen }: Prop
       <div className='flex flex-col items-center justify-center w-full'>
         <div className='mb-5 w-full p-5 cursor-pointer' onClick={redirectToDashboard}>
           {/* {isLoading ? <Skeleton className='w-28 h-7 rounded-sm' /> : isSuccess ? title : 'Dashboard'} */}
-          <Img src={logo} alt='Inova' className='h-8 w-auto' />
+          <Img src={logo} alt='Argobots' className='h-8 w-auto' />
         </div>
 
         <AdminLinks links={links} currentLink={currentLink} setnavbarOpen={setnavbarOpen} />

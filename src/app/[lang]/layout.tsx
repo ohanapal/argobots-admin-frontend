@@ -13,7 +13,7 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: 'Inova'
+  title: 'Argobots'
 }
 
 export default function RootLayout({
