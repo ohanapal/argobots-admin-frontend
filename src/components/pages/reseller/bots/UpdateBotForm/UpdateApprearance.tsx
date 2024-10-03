@@ -7,8 +7,11 @@ import { Input } from '@/components/reusable/form/input'
 import SingleAccordion from '@/components/reusable/form/single-accordion'
 import { Label } from '@/components/ui/label'
 import { slugify } from '@/utils/form/slugify'
+import { CopyIcon } from 'lucide-react'
+import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useFormContext } from 'react-hook-form'
+import toast from 'react-hot-toast'
 
 export default function UpdateAppearance() {
   const { watch, setValue } = useFormContext()
@@ -27,14 +30,39 @@ export default function UpdateAppearance() {
     else setValue('embedding_url', '')
   }, [nameVal, setValue])
 
+  const { id } = useParams()
 
   const [checked, setChecked] = useState(false)
   console.log(checked)
   return (
     <SingleAccordion value='appearance' label='Appearance'>
       {/* add checkbox to expose bot id */}
-      <Input type='checkbox' checked={checked} onChange={() => setChecked(!checked)} />
-      
+      <div className='flex items-center gap-x-2 mt-0 mb-4'>
+        <input
+          type="checkbox"
+          id="toggleId"
+          className='w-4 h-4'
+          checked={checked}
+          onChange={() => setChecked(!checked)}
+        />
+        <label htmlFor="toggleId" >
+          {checked && id ?
+            <p className='relative mt-1 flex gap-2 items-center cursor-pointer'
+              onClick={() => {
+                // navigator.clipboard.writeText(id)
+                toast.success('Bot ID copied to clipboard', { duration: 2000 })
+              }}
+            >
+              <span className='blur-sm'>{id}</span>
+              <span className='flex items-center gap-2 hover:bg-slate-100 transition px-2 py-1'>
+                <CopyIcon className='cursor-pointer w-4 h-4' />
+                <span>COPY BOT ID</span>
+              </span>
+            </p> :
+            <span className='my-2'>Expose BOT ID</span>}
+        </label>
+      </div>
+
       <Input name='name' label='Assistant Name' placeholder='Assistant name here...' required />
       <Input name='embedding_url' label='Embedding URL Slug' placeholder='Edit Embedding URL Slug...' required />
 
