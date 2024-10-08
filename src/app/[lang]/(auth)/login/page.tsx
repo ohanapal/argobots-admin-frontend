@@ -2,7 +2,7 @@ import AuthPageWrapper from '@/components/common/auth/AuthPageWrapper'
 import LoginForm from '@/components/pages/auth/login/LoginForm'
 
 export const metadata = {
-  title: 'Login | Inova',
+  title: 'Login | Argobots',
   description: 'Login page'
 }
 

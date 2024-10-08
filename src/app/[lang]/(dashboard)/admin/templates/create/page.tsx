@@ -1,7 +1,7 @@
 import CreateTemplateForm from '@/components/pages/admin/templates/CreateTemplateForm'
 
 export const metadata = {
-  title: 'Create Template | Inova'
+  title: 'Create Template | Argobots'
 }
 export default function CreateTemplatePage() {
   return <CreateTemplateForm />

@@ -5,7 +5,7 @@ import LLink from '@/components/ui/llink'
 import { PlusSquare } from 'lucide-react'
 
 export const metadata = {
-  title: 'Resellers | Inova'
+  title: 'Resellers | Argobots'
 }
 
 export default function AdminResellersPage() {
