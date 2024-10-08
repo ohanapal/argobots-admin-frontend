@@ -7,8 +7,10 @@ import { Input } from '@/components/reusable/form/input'
 import SingleAccordion from '@/components/reusable/form/single-accordion'
 import { Label } from '@/components/ui/label'
 import { slugify } from '@/utils/form/slugify'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useFormContext } from 'react-hook-form'
+
+
 
 export default function UpdateAppearance() {
   const { watch, setValue } = useFormContext()
@@ -29,6 +31,8 @@ export default function UpdateAppearance() {
 
   return (
     <SingleAccordion value='appearance' label='Appearance'>
+       
+
       <Input name='name' label='Assistant Name' placeholder='Assistant name here...' required />
       <Input name='embedding_url' label='Embedding URL Slug' placeholder='Edit Embedding URL Slug...' required />
 
