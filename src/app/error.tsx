@@ -18,7 +18,7 @@ export default function Error({ error, reset }) {
         Something went wrong!
       </Typography>
       <p className='text-xl text-text-gray mt-2 mb-4'>{error.message}</p>
-
+      {/* test commit */}
       <Button variant='black' onClick={() => reset()}>
         Try again
       </Button>
