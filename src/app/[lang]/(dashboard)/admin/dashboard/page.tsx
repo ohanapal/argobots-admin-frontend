@@ -15,9 +15,9 @@ export default function DashboardPage() {
       <Analytics />
       <Tutorial
         videoId='qXgYQgCRqz8'
-        title='Learn More'
-        description='about the importance of having an AI chatbot'
-        ctaLabel='Learn More'
+        title='SYNC NOW'
+        description='You can train your bot through google drive'
+        ctaLabel='Go'
         ctaHref='/'
         className='my-10'
       />
