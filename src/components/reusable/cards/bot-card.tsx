@@ -72,7 +72,7 @@ export default function BotCard({ logo_light, logo_dark, name, category, created
           <CardAvatar imgSrc={imgSrc} name={name} />
           <p className='text-sm font-semibold text-text-heading mt-2'>{name}</p>
           <Badge variant='blue' className='break-all'>
-            {category}
+            {category} 
           </Badge>
         </div>
 
@@ -83,22 +83,23 @@ export default function BotCard({ logo_light, logo_dark, name, category, created
         <div className='flex items-center gap-x-2 mt-0 mb-4 bg'>
           <input
             type="checkbox"
-            id="toggleId"
+            id={`toggleId-${_id}`}  // Unique id for each checkbox
             className='w-4 h-4'
             checked={checked}
             onChange={() => setChecked(!checked)}
           />
-          <label htmlFor="toggleId" >
+          <label htmlFor={`toggleId-${_id}`} >  {/* Matching the unique id */}
             {checked && _id ?
               <p className='relative mt-1 flex gap-2 items-center cursor-pointer'
                 onClick={() => {
+                  navigator.clipboard.writeText(_id)
                   toast.success('Bot ID copied to clipboard', { duration: 2000 })
                 }}
               >
-                <span className=''>{_id.slice(0, 10) + '...'}</span>
+                <span className='-mt-1'>{_id.slice(0, 13) + '...'}</span>
                 <span className='flex items-center gap-2 hover:bg-slate-100 transition px-2 py-1'>
                   <CopyIcon className='cursor-pointer w-3 h-3' />
-                  <span className='text-[12px]'>COPY BOT ID</span>
+                  {/* <span className='text-[12px]'>COPY BOT ID</span> */}
                 </span>
               </p> :
               <span className='my-2 text-[12px] cursor-pointer'>EXPOSE BOT ID</span>}
