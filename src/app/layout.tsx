@@ -23,6 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning>
+      {/* reduc used in layout */}
       <ReduxProvider>
         <ThemeProvider attribute='class' defaultTheme='light' enableSystem disableTransitionOnChange>
           <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
