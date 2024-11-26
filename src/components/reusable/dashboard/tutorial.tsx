@@ -1,0 +1,106 @@
+'use client'
+
+import tutorialBg from '@/assets/images/common/dashboard/tutorial-bg.png'
+import digitalCeoScreenshot from '@/assets/images/common/dashboard/digitalceo_screenshot.jpg'
+import { Button } from '@/components/ui/button'
+import { Img } from '@/components/ui/img'
+import Typography from '@/components/ui/typography'
+import { cn } from '@/lib/utils'
+import { useState, useEffect } from 'react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
+
+interface Props {
+  className?: string
+}
+
+const slides = [
+  {
+    id: 1,
+    imgSrc: 'https://argobot-bucket.s3.us-east-2.amazonaws.com/pm-pal.png',
+    title: 'SYNC NOW',
+    description: 'You can train your bot through Google Drive directly',
+    link: 'https://pm-pal-frontend.vercel.app',
+  },
+  {
+    id: 2,
+    imgSrc: digitalCeoScreenshot.src,
+    title: 'RESEARCH TOOL',
+    description: 'Use Google, scraper, and your knowledge base in an Argobots chat',
+    link: 'https://digitalceo.argobots.chat/',
+  },
+]
+
+export default function Tutorial({ className }: Props) {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [fade, setFade] = useState(true)
+
+  const handleNext = () => {
+    setFade(false) // Trigger fade-out
+    setTimeout(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length)
+      setFade(true) // Trigger fade-in after slide change
+    }, 300)
+  }
+
+  const handlePrev = () => {
+    setFade(false)
+    setTimeout(() => {
+      setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length)
+      setFade(true)
+    }, 300)
+  }
+
+  // Set up auto-slide every 5 seconds
+  useEffect(() => {
+    const slideInterval = setInterval(handleNext, 7000)
+    return () => clearInterval(slideInterval) // Clear interval on component unmount
+  }, [])
+
+  return (
+    <div className='relative'>
+      <section
+        className={cn(
+          'bg-cover bg-center bg-no-repeat p-2 min-[400px]:p-4 sm:p-6 rounded-[10px] shadow-sm flex flex-col min-[900px]:flex-row lg:flex-col min-[1200px]:flex-row items-center justify-between gap-x-10 gap-y-12 transition-opacity duration-500',
+          fade ? 'opacity-100' : 'opacity-0',
+          className
+        )}
+        style={{ backgroundImage: `url(${tutorialBg.src})`, height: '300px' }} // Fixed height here
+      >
+        <Img
+          src={slides[currentSlide].imgSrc}
+          alt='tutorial'
+          className='w-full min-[900px]:w-1/2 lg:w-full min-[1200px]:w-1/2 rounded-md h-full object-cover' // Full height for the image
+        />
+        <div className='w-full min-[900px]:w-1/2 lg:w-full min-[1200px]:w-1/2 flex flex-col items-center justify-center gap-y-4 pt-10 min-[900px]:pt-0 lg:pt-10 min-[1200px]:pt-0 h-full'>
+          <Typography variant='h1' className='text-white font-bold'>
+            {slides[currentSlide].title}
+          </Typography>
+          <p className='text-lg font-normal text-white text-center'>
+            {slides[currentSlide].description}
+          </p>
+          <Button
+            variant='unstyled'
+            className='bg-orange-dark text-white px-8'
+            onClick={() => window.open(slides[currentSlide].link, '_blank')}
+          >
+            Go
+          </Button>
+        </div>
+
+        {/* Slider Navigation Buttons */}
+        <button
+          onClick={handlePrev}
+          className='absolute bottom-2 right-16 transform -translate-y-1/2 bg-gray-300 text-black p-2 rounded-full'
+        >
+          <ArrowLeft />
+        </button>
+        <button
+          onClick={handleNext}
+          className='absolute bottom-2 right-4 transform -translate-y-1/2 bg-gray-300 text-black p-2 rounded-full'
+        >
+          <ArrowRight />
+        </button>
+      </section>
+    </div>
+  )
+}
