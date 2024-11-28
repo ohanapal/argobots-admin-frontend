@@ -2,7 +2,7 @@ import AllUsers from '@/components/pages/admin/users/AllUsers'
 import DashboardHeading from '@/components/reusable/dashboard/dashboard-heading'
 
 export const metadata = {
-  title: 'Users | Argobot'
+  title: 'Users | Argobots'
 }
 
 export default function Users() {

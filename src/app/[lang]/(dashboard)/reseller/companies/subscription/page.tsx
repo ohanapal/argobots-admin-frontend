@@ -13,10 +13,10 @@ export default function ResellerCompanySubscriptionPage() {
           variant='h2'
           className='text-balance text-center pb-5 leading-loose text-2xl md:text-3xl lg:text-5xl max-w-full'
         >
-          Subscribe to Argobot
+          Subscribe to Argobots
         </Typography>
         <p className='text-text-tartiary text-center max-w-full font-medium text-lg'>
-          Subscribe to Argobot&apos;s AI Chatbot for Customer Support
+          Subscribe to Argobots&apos;s AI Chatbot for Customer Support
         </p>
         {/* <div className='flex items-center justify-center mt-5'>
         <LLink href='/pricing'>

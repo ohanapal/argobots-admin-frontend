@@ -14,7 +14,7 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: 'BLDR AI Chatbot',
-  description: 'Product of Argobot AI Solutions'
+  description: 'Product of Argobots AI Solutions'
 }
 
 export default function RootLayout({

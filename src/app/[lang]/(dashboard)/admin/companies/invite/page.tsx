@@ -2,7 +2,7 @@ import CompanyInviteForm from '@/components/pages/admin/companies/CompanyInviteF
 import DashboardHeading from '@/components/reusable/dashboard/dashboard-heading'
 
 export const metadata = {
-  title: 'Invite Company | Argobot'
+  title: 'Invite Company | Argobots'
 }
 
 export default function InviteCompanyPage() {

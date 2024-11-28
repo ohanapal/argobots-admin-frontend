@@ -1,7 +1,7 @@
 import AllCategories from '@/components/pages/admin/bot-categories/AllCategories'
 
 export const metadata = {
-  title: 'Bot Categories | Argobot'
+  title: 'Bot Categories | Argobots'
 }
 
 export default function BotCategoriesPage() {

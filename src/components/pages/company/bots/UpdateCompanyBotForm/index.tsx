@@ -2,6 +2,7 @@
 
 import BotsImagesComp from '@/components/pages/admin/bots/BotImages/BotsImagesComp'
 import ChatPreview from '@/components/pages/admin/bots/common/ChatPreview'
+import EmbeddedWidgets from '@/components/pages/admin/bots/UpdateBotForm/EmbeddedWidgets'
 import UpdateAdvanced from '@/components/pages/admin/bots/UpdateBotForm/UpdateAdvanced'
 import UpdateAppearance from '@/components/pages/admin/bots/UpdateBotForm/UpdateApprearance'
 import UpdateLLMSettings from '@/components/pages/admin/bots/UpdateBotForm/UpdateLLMSettings'
@@ -19,7 +20,6 @@ import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { scroller } from 'react-scroll'
 import BotLinks from './BotLinks'
-import EmbeddedWidgets from './EmbeddedWidgets'
 import FAQ from './FAQ'
 import KnowledgeBase from './KnowledgeBase'
 

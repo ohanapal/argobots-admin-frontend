@@ -3,7 +3,7 @@ import DashboardHeading from '@/components/reusable/dashboard/dashboard-heading'
 import React from 'react'
 
 export const metadata = {
-  title: 'Add a Package | Argobot'
+  title: 'Add a Package | Argobots'
 }
 
 export default function PackageCreatePage() {

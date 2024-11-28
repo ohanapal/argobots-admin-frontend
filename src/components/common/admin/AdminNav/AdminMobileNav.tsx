@@ -30,7 +30,7 @@ export default function AdminMobileNav({ user, navbarOpen, setnavbarOpen, curren
       <div className='flex flex-col items-center justify-center w-full'>
         <div className='flex items-center justify-between gap-4 mb-5'>
           <LLink href='/' className='w-full p-5'>
-            <Img src={logo} alt='Argobot' className='h-8 w-auto' />
+            <Img src={logo} alt='Argobots' className='h-8 w-auto' />
           </LLink>
           <X
             className='text-text-primary cursor-pointer size-10'

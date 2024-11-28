@@ -3,7 +3,7 @@ import BackButton from '@/components/pages/admin/bots/common/BackButton'
 import DashboardHeading from '@/components/reusable/dashboard/dashboard-heading'
 
 export const metadata = {
-  title: 'Bot Images | Argobot'
+  title: 'Bot Images | Argobots'
 }
 
 export default function BotAllImagesPage() {

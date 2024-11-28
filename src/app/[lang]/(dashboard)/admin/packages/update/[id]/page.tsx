@@ -2,7 +2,7 @@ import UdpatePackageForm from '@/components/pages/admin/packages/UdpatePackageFo
 import DashboardHeading from '@/components/reusable/dashboard/dashboard-heading'
 
 export const metadata = {
-  title: 'Update a Package | Argobot'
+  title: 'Update a Package | Argobots'
 }
 
 export default function PackageUpdatePage() {

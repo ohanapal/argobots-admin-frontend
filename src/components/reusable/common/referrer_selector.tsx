@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils'
 import { Dispatch, HTMLAttributes, SetStateAction } from 'react'
 
 export const referrerList = [
-  { label: 'Not selected', value: undefined },
   { label: 'Facebook', value: 'facebook' },
   { label: 'Instagram', value: 'instagram' },
   { label: 'LinkedIn', value: 'linkedin' },
@@ -22,7 +21,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 export default function ReferrerSelector({ referrer, setreferrer, className, ...rest }: Props) {
   return (
-    <div {...rest} className={cn('space-x-1 space-y-1 p-1 shadow-md inline-block rounded-lg mb-3', className)}>
+    <div {...rest} className={cn('space-x-1 space-y-1 p-1 shadow-md inline-block rounded-lg', className)}>
       {referrerList.map(({ label, value }) => (
         <Button key={value} onClick={() => setreferrer(value)} variant={referrer === value ? 'secondary' : 'unstyled'}>
           {label}

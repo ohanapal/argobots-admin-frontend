@@ -5,7 +5,7 @@ import LLink from '@/components/ui/llink'
 import { PlusSquare, SquareDashedMousePointer } from 'lucide-react'
 
 export const metadata = {
-  title: 'All Bots | Argobot'
+  title: 'All Bots | Argobots'
 }
 
 export default function BotsPage() {

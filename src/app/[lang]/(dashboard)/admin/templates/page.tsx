@@ -5,7 +5,7 @@ import LLink from '@/components/ui/llink'
 import { PlusSquare } from 'lucide-react'
 
 export const metadata = {
-  title: 'Templates | Argobot'
+  title: 'Templates | Argobots'
 }
 export default function AllTemplatesPage() {
   return (

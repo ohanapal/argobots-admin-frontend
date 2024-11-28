@@ -2,7 +2,7 @@ import CreateCompanyForm from '@/components/pages/admin/companies/CreateCompanyF
 import DashboardHeading from '@/components/reusable/dashboard/dashboard-heading'
 
 export const metadata = {
-  title: 'Add a Company | Argobot'
+  title: 'Add a Company | Argobots'
 }
 
 export default function CreateCompanyPage() {

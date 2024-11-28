@@ -27,7 +27,7 @@ const HighlightTextarea = () => {
     <body>
       <div>
         <div style="position:relative;padding-top:56.25%;">
-          <iframe src="https://api.Argobotsolutions.ai/bot_en_v2/1719909822586x489736361986490400" frameborder="0" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100vh;" allow="camera; microphone"></iframe>
+          <iframe src="https://api.Argobotssolutions.ai/bot_en_v2/1719909822586x489736361986490400" frameborder="0" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100vh;" allow="camera; microphone"></iframe>
         </div>
       </div>
       <script>

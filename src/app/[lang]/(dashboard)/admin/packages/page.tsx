@@ -5,7 +5,7 @@ import LLink from '@/components/ui/llink'
 import { PlusSquare } from 'lucide-react'
 
 export const metadata = {
-  title: 'All Packages | Argobot'
+  title: 'All Packages | Argobots'
 }
 
 export default function AllPackagesPage() {

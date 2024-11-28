@@ -6,7 +6,7 @@ import RecentTemplates from '@/components/pages/admin/dashboard/RecentTemplates'
 import Tutorial from '@/components/reusable/dashboard/tutorial'
 
 export const metadata = {
-  title: 'Dashboard | Argobot'
+  title: 'Dashboard | Argobots'
 }
 
 export default function DashboardPage() {
