@@ -2,6 +2,7 @@
 
 import tutorialBg from '@/assets/images/common/dashboard/tutorial-bg.png'
 import digitalCeoScreenshot from '@/assets/images/common/dashboard/digitalceo_screenshot.jpg'
+import transcriberScreenshot from '@/assets/images/common/dashboard/transcriber_screenshot.jpg'
 import { Button } from '@/components/ui/button'
 import { Img } from '@/components/ui/img'
 import Typography from '@/components/ui/typography'
@@ -27,6 +28,13 @@ const slides = [
     title: 'RESEARCH TOOL',
     description: 'Use Google, scraper, and your knowledge base in an Argobots chat',
     link: 'https://r3.argobots.chat/',
+  },
+  {
+    id: 2,
+    imgSrc: transcriberScreenshot.src,
+    title: 'AI TRANSCRIBER',
+    description: 'All your activities will be known to your own bot!',
+    link: 'https://converted-transcriber-fe.vercel.app/',
   },
 ]
 
